@@ -7,17 +7,53 @@
     "vscode": "^1.103.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "onCommand:rotatingTheme.start",
+    "onCommand:rotatingTheme.stop",
+    "onCommand:rotatingTheme.nextNow"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
-      {
-        "command": "rotating-theme.helloWorld",
-        "title": "Hello World"
+      { "command": "rotatingTheme.start", "title": "Rotating Theme: Start" },
+      { "command": "rotatingTheme.stop", "title": "Rotating Theme: Stop" },
+      { "command": "rotatingTheme.nextNow", "title": "Rotating Theme: Next Now" }
+    ],
+     "configuration": {
+      "title": "Rotating Theme (Palette Fader)",
+      "properties": {
+        "rotatingTheme.themeFolder": {
+          "type": "string",
+          "default": "",
+          "description": "Absolute path to a folder containing JSON palette files. Files are read and rotated in alphabetical order."
+        },
+        "rotatingTheme.transitionDurationMs": {
+          "type": "number",
+          "default": 1500,
+          "minimum": 100,
+          "description": "How long to fade from one palette to the next (milliseconds)."
+        },
+        "rotatingTheme.transitionSteps": {
+          "type": "integer",
+          "default": 30,
+          "minimum": 2,
+          "maximum": 200,
+          "description": "Number of steps within each fade. More steps = smoother but more updates."
+        },
+        "rotatingTheme.dwellMs": {
+          "type": "number",
+          "default": 4000,
+          "minimum": 0,
+          "description": "How long to sit on a palette before starting the next fade (milliseconds)."
+        },
+        "rotatingTheme.keysWhitelist": {
+          "type": "array",
+          "default": [],
+          "items": { "type": "string" },
+          "description": "Optional list of color keys to animate (e.g. [\"activityBar.background\", \"editor.background\"]). Leave empty to animate all keys found."
+        }
       }
-    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -38,4 +74,4 @@
     "@vscode/test-cli": "^0.0.11",
     "@vscode/test-electron": "^2.5.2"
   }
-}
+}}
