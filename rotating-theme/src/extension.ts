@@ -76,9 +76,16 @@ function readPalettesFrom(folder: string, keysWhitelist: string[]): Palette[] {
             const json = JSON.parse(raw);
             const colors = json.colors && typeof json.colors === 'object' ? json.colors : json;
             const entry: Palette = { name: path.basename(file, '.json'), colors: {} };
+            const cfg = vscode.workspace.getConfiguration('rotatingTheme');
+            const skipEditor = cfg.get<boolean>('skipEditorColors') ?? true;
             for (const [k, v] of Object.entries(colors)) {
                 if (typeof v === 'string') {
+                    // Skip editor.* keys completely
+                    if (skipEditor && k.startsWith('editor.')) continue;
+
+                    // Only include keys in whitelist if it's set
                     if (keysWhitelist.length && !keysWhitelist.includes(k)) continue;
+
                     entry.colors[k] = v;
                 }
             }

@@ -1,4 +1,12 @@
 {
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
   "name": "rotating-theme",
   "displayName": "Rotating Theme",
   "description": "An extension that rotates your IDE theme",
@@ -16,11 +24,20 @@
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
-      { "command": "rotatingTheme.start", "title": "Rotating Theme: Start" },
-      { "command": "rotatingTheme.stop", "title": "Rotating Theme: Stop" },
-      { "command": "rotatingTheme.nextNow", "title": "Rotating Theme: Next Now" }
+      {
+        "command": "rotatingTheme.start",
+        "title": "Rotating Theme: Start"
+      },
+      {
+        "command": "rotatingTheme.stop",
+        "title": "Rotating Theme: Stop"
+      },
+      {
+        "command": "rotatingTheme.nextNow",
+        "title": "Rotating Theme: Next Now"
+      }
     ],
-     "configuration": {
+    "configuration": {
       "title": "Rotating Theme (Palette Fader)",
       "properties": {
         "rotatingTheme.themeFolder": {
@@ -50,28 +67,37 @@
         "rotatingTheme.keysWhitelist": {
           "type": "array",
           "default": [],
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Optional list of color keys to animate (e.g. [\"activityBar.background\", \"editor.background\"]). Leave empty to animate all keys found."
+        },
+        "rotatingTheme.skipEditorColors": {
+          "type": "boolean",
+          "default": true,
+          "description": "If true, ignores all editor.* colors so syntax highlighting is not overridden."
         }
       }
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src",
-    "test": "vscode-test"
+    },
+    "devDependencies": {
+      "@types/vscode": "^1.102.0",
+      "@types/node": "^22.x",
+      "@types/mocha": "^10.0.10",
+      "typescript": "^5.9.2",
+      "eslint": "^9.32.0",
+      "@typescript-eslint/parser": "^8.39.0",
+      "@typescript-eslint/eslint-plugin": "^8.39.0",
+      "@vscode/test-electron": "^2.5.2"
+    }
   },
   "devDependencies": {
-    "@types/vscode": "^1.102.0",
     "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "@typescript-eslint/parser": "^8.39.0",
-    "eslint": "^9.32.0",
-    "typescript": "^5.9.2",
-    "@vscode/test-cli": "^0.0.11",
-    "@vscode/test-electron": "^2.5.2"
-  }
-}}
+    "@types/node": "^24.3.0",
+    "@types/vscode": "^1.103.0"
+  },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/yourusername/rotating-theme.git"
+}
+
+}
