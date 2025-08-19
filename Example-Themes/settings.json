@@ -1,0 +1,81 @@
+{
+        "titleBar.activeBackground": "#1a1b2b",  // Matches editor background
+        "titleBar.activeForeground": "#d8dee9",  // Active title text color
+        "titleBar.inactiveBackground": "#1a1b2b",  // Dimmed background for inactive window
+        "titleBar.inactiveForeground": "#a3be8c",  // Dimmed text color for inactive window
+        "menu.background": "#1e2430",  // Menu dropdown background
+        "menu.foreground": "#d8dee9",  // Menu dropdown text color
+        "menu.selectionBackground": "#81a1c1",  // Highlighted menu item background
+        "menu.selectionForeground": "#ffffff",  // Highlighted menu item text color
+        "menu.separatorBackground": "#545D61",  // Menu separator color
+
+        "editor.background": "#181a23",
+        "editor.foreground": "#d8dee9",
+
+        "input.background": "#070f24",         // Search input background
+        "input.foreground": "#d8dee9",         // Search input text color
+        "input.border": "#94401E",             // Search input border
+        "input.placeholderForeground": "#5e81ac",  // Placeholder text in the search bar
+        "inputValidation.infoBorder": "#81a1c1",  // Border for info messages
+        "inputValidation.warningBorder": "#e5b567",  // Border for warnings
+        "inputValidation.errorBorder": "#bf616a",    // Border for errors
+
+        "quickInput.background": "#1a1b2b",     // Background of the quick input
+        "quickInput.foreground": "#d8dee9",     // Text color for quick input
+        "quickInputTitle.background": "#070f24", // Title background for the quick input
+
+        "tab.activeBackground": "#1a1b2b",  // Active tab background matches editor background
+        "tab.activeForeground": "#e5b567",  // Vibrant tab text (brighter to pop more)
+        "tab.inactiveBackground": "#070f24",  // Inactive tab background (darkened)
+        "tab.inactiveForeground": "#e0aae7",  // More vibrant inactive tab text
+
+        // ===== Activity Bar (Side Menu) =====
+        "activityBar.background": "#1a1b2b",  // Activity bar background
+        "activityBar.foreground": "#b8c7e2",  // Activity bar text color
+        "activityBar.inactiveForeground": "#8bb962",  // Inactive icon color
+        "activityBar.activeBorder": "#96563d",  // Active icon border
+
+        // ===== Side Bar =====
+        "sideBar.background": "#070f24",  // Sidebar background
+        "sideBar.foreground": "#d8dee9",  // Sidebar text
+        "sideBar.border": "#13244e",  // Sidebar border
+        "sideBarSectionHeader.background": "#94401E",  // Section header background
+        "sideBarSectionHeader.foreground": "#d8dee9",  // Section header text
+        "list.activeSelectionBackground": "#307bc57c",  // Active selection background
+        "list.inactiveSelectionBackground": "#2c33437c",  // Inactive selection background
+        "list.hoverBackground": "#4247537c",  // Hover background
+
+        // ===== Bottom Panels =====
+        "panel.background": "#070f24",  // Panel background
+        "panel.border": "#b48ead",  // Panel border
+        "panelTitle.activeForeground": "#d8dee9",  // Active tab text
+        "panelTitle.inactiveForeground": "#81a1c1",  // Inactive tab text
+        "panelTitle.activeBorder": "#e5b567",  // Underline for active tab
+
+        "problemsPanel.background": "#1a1b2b",  // Problems panel background
+        "problemsPanel.foreground": "#d8dee9",  // Problems panel text color
+
+        "outputPanel.background": "#1a1b2b",  // Output panel background
+        "outputPanel.foreground": "#d8dee9",  // Output panel text color
+
+        "debugConsole.background": "#1a1b2b",  // Debug Console background
+        "debugConsole.foreground": "#d8dee9",  // Debug Console text color
+        "debugConsole.errorForeground": "#bf616a",  // Debug Console error text
+        "debugConsole.warningForeground": "#e5b567",  // Debug Console warning text
+
+        "terminal.background": "#1a1b2b",  // Terminal background
+        "terminal.foreground": "#d8dee9",  // Terminal text color
+        "terminalCursor.background": "#1a1b2b",  // Terminal cursor background
+        "terminalCursor.foreground": "#e5b567",  // Terminal cursor foreground
+        "terminal.selectionBackground": "#81a1c17c",  // Terminal selection background
+
+        "statusBar.background": "#94401E",  // Primary status bar background
+        "statusBar.foreground": "#e5e9f0",  // Text color in the status bar
+        "statusBar.border": "#b48ead",      // Optional border around the status bar
+        "statusBar.debuggingBackground": "#bf616a",  // Status bar color when debugging
+        "statusBar.debuggingForeground": "#ffffff",  // Debugging text color
+        "statusBar.noFolderBackground": "#2c3343",  // Status bar when no folder is open
+        "statusBar.noFolderForeground": "#d8dee9",   // Text color for no folder mode
+        "badge.background": "#1a1b2b", // Golden yellow for the badge background
+        "badge.foreground": "#d8dee9",
+    }

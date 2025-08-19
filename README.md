@@ -13,7 +13,7 @@
 - Customizable whitelist of color keys to animate.
 - Configurable dwell time between palette transitions.
 
-![Rotating Theme Example](images/rotating-theme.gif)
+![Rotating Theme Example](Example.gif)
 
 > Tip: Use your own `.json` palette files in alphabetical order for unique color rotations!
 
